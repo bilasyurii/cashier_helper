@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ico_logo.png</file>
+        <file>ico_find.png</file>
+        <file>ico_pay.png</file>
+        <file>ico_read.png</file>
+        <file>ico_show.png</file>
+        <file>ico_logo.ico</file>
+    </qresource>
+</RCC>

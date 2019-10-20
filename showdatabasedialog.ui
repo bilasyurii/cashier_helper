@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CShowDatabaseDialog</class>
+ <widget class="QDialog" name="CShowDatabaseDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>617</width>
+    <height>495</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>База товарів</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QVBoxLayout" name="mainPart">
+     <item>
+      <layout class="QHBoxLayout" name="findLine" stretch="0,0,0,0,0,0,0,0">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Пошук</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_1">
+         <property name="text">
+          <string>За іменем:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="byNameEdit"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="clearName">
+         <property name="maximumSize">
+          <size>
+           <width>25</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Х</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>За штрих-кодом:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="byBarcodeEdit">
+         <property name="inputMask">
+          <string>9999999999999</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="clearBarcode">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>25</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Х</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="dataTable">
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="rowCount">
+        <number>1</number>
+       </property>
+       <property name="columnCount">
+        <number>3</number>
+       </property>
+       <attribute name="horizontalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>false</bool>
+       </attribute>
+       <row/>
+       <column>
+        <property name="text">
+         <string>Назва</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Штрих-код</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Ціна</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="addGoodBlock" native="true">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="addGoodLine">
+          <property name="spacing">
+           <number>3</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Назва:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="addGoodName"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Штрих-код:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="addGoodCode">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="inputMask">
+             <string>9999999999999</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Ціна:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="addGoodPrice"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="addGoodButton">
+            <property name="text">
+             <string>Додати</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="cancelGoodButton">
+            <property name="text">
+             <string>Скасувати</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="addGoodSeparator">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="buttonLine">
+       <item>
+        <widget class="QPushButton" name="newGood">
+         <property name="toolTip">
+          <string>Додати в базу новий товар (Ctrl+N)</string>
+         </property>
+         <property name="text">
+          <string>Новий товар</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="editGood">
+         <property name="toolTip">
+          <string>Редагувати виділений товар (Ctrl+E)</string>
+         </property>
+         <property name="text">
+          <string>Редагувати товар</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="applyGood">
+         <property name="text">
+          <string>Застосувати</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="deleteGood">
+         <property name="toolTip">
+          <string>Видалити з бази виділений товар (Ctrl+D)</string>
+         </property>
+         <property name="text">
+          <string>Видалити товар</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

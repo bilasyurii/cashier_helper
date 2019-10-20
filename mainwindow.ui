@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>751</width>
+    <height>532</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Електронний помічник касира</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QHBoxLayout" name="TopLine" stretch="0,0,0,0,0">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Поточна вартість кошика:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="CartCost">
+        <property name="text">
+         <string>0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="hSpacer1">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Прибуток каси за поточну сесію:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="Cash">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>0.00</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="CartTable">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="columnCount">
+       <number>6</number>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>120</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>50</number>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>true</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Назва</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Штрих-код</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Кількість</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignTrailing|AlignVCenter</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Ціна</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignTrailing|AlignVCenter</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Вартість</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignTrailing|AlignVCenter</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Видалити</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="BottomLine">
+      <item>
+       <widget class="QPushButton" name="ReadBarcode">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Зчитати штрих-код (Ctrl+B)</string>
+        </property>
+        <property name="text">
+         <string>Зчитати штрих-код</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="FindAddGoods">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Знайти товар в базі та додати в кошик (Ctrl+F)</string>
+        </property>
+        <property name="text">
+         <string>Знайти та додати товар</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ShowGoods_2">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Показати базу товарів (Ctrl+S)</string>
+        </property>
+        <property name="text">
+         <string>Показати базу товарів</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="OkButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Розрахувати клієнта (Ctrl+P)</string>
+        </property>
+        <property name="text">
+         <string>Розрахувати</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
